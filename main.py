@@ -37,9 +37,6 @@ THREADPOOL = ThreadPoolExecutor(max_workers=1000)
 import logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-# Flask app for Render
-app = Flask(__main__)
-
 @app.route('/')
 def home():
     return "Bot is running!"
