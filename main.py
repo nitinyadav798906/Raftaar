@@ -38,7 +38,7 @@ import logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Flask app for Render
-app = Flask(__name__)
+app = Flask(__main__)
 
 @app.route('/')
 def home():
