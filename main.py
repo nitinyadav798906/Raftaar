@@ -37,6 +37,16 @@ THREADPOOL = ThreadPoolExecutor(max_workers=1000)
 import logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
+# Flask app for Render
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "Bot is running!"
+
+def run_flask():
+    app.run(host="0.0.0.0", port=8080) # Use here 8080 port,if you are deploying it on koyeb
+    
 image_list = [
 "https://graph.org/file/8b1f4146a8d6b43e5b2bc-be490579da043504d5.jpg",
 "https://graph.org/file/b75dab2b3f7eaff612391-282aa53538fd3198d4.jpg",
@@ -45,11 +55,11 @@ image_list = [
 "https://graph.org/file/8b7e3d10e362a2850ba0a-f7c7c46e9f4f50b10b.jpg",
 ]
 print(4321)
-bot = Client(
-    "bot",
-    api_id=api_id,
-    api_hash=api_hash,
-    bot_token=bot_token)
+#bot = Client(
+    #"bot",
+    #api_id=12475131,
+    #api_hash=719171e38be5a1f500613837b79c536f,
+    #bot_token=8062798495:AAFLFgY8qZkFFKX6oOeumzA_ZSzdv1N7B5Y)
 
 @bot.on_message(filters.command(["start"]))
 async def start(bot, message):
