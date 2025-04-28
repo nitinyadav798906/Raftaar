@@ -37,9 +37,6 @@ THREADPOOL = ThreadPoolExecutor(max_workers=1000)
 import logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-if __name__ == "__main__":
-    app.run(debug=True)
-
 image_list = [
 "https://graph.org/file/8b1f4146a8d6b43e5b2bc-be490579da043504d5.jpg",
 "https://graph.org/file/b75dab2b3f7eaff612391-282aa53538fd3198d4.jpg",
